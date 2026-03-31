@@ -1,0 +1,32 @@
+crs-backend
+--
+PS C:\Users\DeB\Desktop\crs-backend-service> 
+-
+npm.cmd run dev
+--
+webhook
+--
+PS C:\Users\DeB\Desktop\webhook> 
+-
+$env:PORT="3001"
+-
+PS C:\Users\DeB\Desktop\webhook> 
+-
+npm.cmd run dev
+-
+cloudflared tunnel --url http://localhost:3001
+-
+set in razorpay webhook
+--
+producer
+--
+PS C:\Users\DeB\Desktop\Producer> 
+-
+npm.cmd run dev
+--
+consumer:
+--
+PS C:\Users\DeB\Desktop\consumer> 
+-
+docker compose logs -f radiology-consumer
+--
